@@ -1,7 +1,10 @@
 def gv
 pipeline {
     agent any
-
+	parameters {
+		string(name: 'NXRelease', defaultValue: 'nx2206.latest', description : 'Use the latest IP from NX2206 release to create the build.')
+		string(name: 'UnitPath', defaultValue: '/plm/pnnas/ppic/users/rakesht/JenkinsBuildUnits/NX2206', description : 'Path where build unit for the run is to be created.')
+	}
     stages {
 		stage ('init'){
 			steps {
