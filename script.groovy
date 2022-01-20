@@ -6,6 +6,12 @@ def createUnit()
 def buildUnit()
 {
 	echo "In buildUnit"
+	script{
+		echo 'Building..'
+		sh '''
+		hostname
+		'''
+	}
 }
 
 def TestUnit()
