@@ -9,7 +9,7 @@ def buildUnit()
 	script{
 		echo 'Building here on machine..'
 		sh '''
-		hostname
+		build.sh
 		'''
 	}
 }
