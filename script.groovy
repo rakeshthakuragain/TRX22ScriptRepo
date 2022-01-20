@@ -8,7 +8,7 @@ def buildUnit()
 	script{
 		echo 'Building here on machine..'
 		sh '''
-		./build.sh
+		source ./build.sh
 		'''
 	}
 }
