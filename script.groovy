@@ -5,11 +5,10 @@ def createUnit()
 
 def buildUnit()
 {
-	echo "In buildUnit"
 	script{
 		echo 'Building here on machine..'
 		sh '''
-		build.sh
+		./build.sh
 		'''
 	}
 }
