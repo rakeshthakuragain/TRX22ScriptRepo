@@ -8,7 +8,7 @@ def buildUnit()
 	script{
 		echo 'Building here on machine..'
 		sh '''
-		source ./build.sh ${NXRelease} ${UnitPath}
+		source ./build.sh ${params.NXRelease} ${params.UnitPath}
 		'''
 	}
 }
