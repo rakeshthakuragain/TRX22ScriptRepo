@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         stage('Build') {
-            agent { label 'di2inpun0050lv0' }
+            
             steps {
                 echo 'Building..'
                 sh '''
