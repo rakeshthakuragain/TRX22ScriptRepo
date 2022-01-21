@@ -8,7 +8,8 @@ def buildUnit()
 	script{
 		echo 'Building here on machine..'
 		sh '''
-		source ./build.sh ${params.NXRelease} ${params.UnitPath}
+		chmod +x ./build.sh
+		./build.sh ${params.NXRelease} ${params.UnitPath}
 		'''
 	}
 }
