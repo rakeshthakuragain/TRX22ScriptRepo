@@ -42,7 +42,13 @@ pipeline {
 
     post {
         success {
-            echo 'This will run only if successful'
+            echo 'All tasks completed successfully.'
         }
+		failure {
+			echo 'One or more stages have failed.'
+		}
+		always {
+			echo 'May be email triggering can go here.'
+		}
     }
 }
