@@ -6,10 +6,10 @@ def createUnit()
 def buildUnit()
 {
 	script{
-		echo 'Building here on machine..'
+		echo 'Building here on machine with ${params.NXRelease} and ${params.UnitPath}'
 		sh '''
 		chmod +x ./build.sh
-		./build.sh ${params.NXRelease} ${params.UnitPath}
+		#./build.sh ${params.NXRelease} ${params.UnitPath}
 		'''
 	}
 }
