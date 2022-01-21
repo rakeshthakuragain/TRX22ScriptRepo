@@ -7,8 +7,8 @@ def buildUnit()
 {
 	script{
 		echo "Building here on machine with ${params.NXRelease} and ${params.UnitPath}"
-		export Release=params.NXRelease
-		export Path=params.UnitPath
+		Release=${params.NXRelease}
+		Path=${params.UnitPath}
 		sh '''
 		chmod +x ./build.sh
 		echo 
