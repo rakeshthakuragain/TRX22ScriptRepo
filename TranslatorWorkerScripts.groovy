@@ -4,7 +4,7 @@ def createUnit()
 	script{		
 		def unitFullPath="${params.UnitPath}/${params.NXRelease}_TranslatorWorker_${BUILD_TIMESTAMP}"
 		sh "chmod +x ./createUnit.sh "
-		sh "./createUnit.sh ${params.NXRelease} ${unitFullPath}"		
+		sh "./createTranslatorWorkerUnit.sh ${params.NXRelease} ${unitFullPath}"		
 	}
 }
 
@@ -14,7 +14,7 @@ def buildUnit()
 	script{		
 		def unitFullPath="${params.UnitPath}/${params.NXRelease}_TranslatorWorker_${BUILD_TIMESTAMP}"
 		sh "chmod +x ./buildUnit.sh "
-		sh "./buildUnit.sh ${params.NXRelease} ${unitFullPath}"		
+		sh "./buildTranslatorWorkerUnit.sh ${unitFullPath}"		
 	}
 }
 
@@ -24,7 +24,7 @@ def TestUnit()
 	script{		
 		def unitFullPath="${params.UnitPath}/${params.NXRelease}_TranslatorWorker_${BUILD_TIMESTAMP}"
 		sh "chmod +x ./executeTest.sh "
-		sh "./executeTest.sh ${params.NXRelease} ${unitFullPath}"		
+		sh "./executeTranslatorWorkerTest.sh ${unitFullPath}"		
 	}
 }
 
